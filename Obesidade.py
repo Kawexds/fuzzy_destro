@@ -45,8 +45,8 @@ controlador = ctrl.ControlSystem([regra_1, regra_2, regra_3,regra_4,regra_5,regr
 # #Simulando
 CalculoPeso = ctrl.ControlSystemSimulation(controlador)
 
-notacomer = int(input('Número de calorias (1000kcal): '))
-notaaltura = int(input('Altura (cm): '))
+notacomer = float(input('Número de calorias (1000kcal): '))
+notaaltura = float(input('Altura (cm): '))
 CalculoPeso.input['Comida (1000kcal)'] = notacomer
 CalculoPeso.input['Altura (cm)'] = notaaltura
 CalculoPeso.compute()
